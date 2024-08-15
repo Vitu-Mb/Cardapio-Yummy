@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--biblioteca de icones-->
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Meta tag og-->
+    <meta property="og:tipe" content="website" />
+    <meta property="og:title" content="Yummy lancher - a melhor lanchonete de Recife!" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="Os melhores lanches caseiros da cidade!" />
+    <meta property="og:site_name" content="Yummy lanches" />
+
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <title>Yummy lanches</title>
+</head>
+
+<body>
+    <header class="w-full h-[400px] bg-amber-600 bg-home bg-cover bg-center">
+        <div class=" w-full h-full flex flex-col justify-center items-center">
+            <img src="./assets/Yummy.png" alt="Logo Yummylanches"
+                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-black"> Yummy lanches
+            </h1>
+
+            <span class="text-black font-medium">Rua do lanche 15, Recife/Centro</span>
+
+            <div class="bg-yellow-700 px4 py-1 rounded-lg mt-5" id="date-span">
+                <span class=" text-black font-medium">Ter á Dom - 18:00 as 23:00
+                </span>
+            </div>
+
+        </div>
+    </header>
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb6">
+        Conheça nosso cardápio
+    </h2>
+    <!-- Início menu-->
+    <div id="menu">
+        <!-- grid comidas-->
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <!--produto 1-->
+            <div class="flex gap-2">
+                <img src="./assets/hamburguer de carne.png" alt="Hamburguer rodeo"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Hamburguer Rodeo</p>
+                    <p class="text-sm">Hambúrguer de carne suculento, preparado com carne bovina selecionada,
+                        temperada com especiarias tradicionais. Grelhado na perfeição, servido em um pão macio e
+                        acompanhado de alface fresca, tomate maduro, cebola roxa, queijo derretido e um toque de molho
+                        especial.</p>
+
+                    <div class="flex items-centergap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 25.00</p>
+                        <button class="bg-yellow-800 px-5 rounded add-to-cart-btn" data-name="Hamburguer Rodeo"
+                            data-price="25.00">
+
+                            <i class=" fa fa-cart-plus text-lg text-black"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- fim produto 1-->
+
+            <!--produto 2-->
+            <div class="flex gap-2">
+                <img src="./assets/hamburguer de frango.png" alt="Hamburguer chicken"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Hamburguer Chicken</p>
+                    <p class="text-sm">Hambúrguer de frango suculento, preparado com peito de frango temperado com
+                        especiarias tradicionais. Grelhado na perfeição, servido em um pão macio e acompanhado de
+                        alface fresca, tomate maduro, cebola roxa, queijo derretido e um toque de maionese especial</p>
+
+                    <div class="flex items-centergap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 22.00</p>
+                        <button class="bg-yellow-800 px-5 rounded add-to-cart-btn" data-name="Hamburguer Chicken"
+                            data-price="22.00">
+
+                            <i class=" fa fa-cart-plus text-lg text-black"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- fim produto 2-->
+            <!--produto 3-->
+            <div class="flex gap-2">
+                <img src="./assets/batata frita.png" alt="Batata frita"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Batata frita 250g</p>
+                    <p class="text-sm">Batatas fritas caseiras, cortadas à mão, fritas até ficarem douradas e crocantes,
+                        temperadas com uma pitada de sal marinho. Perfeitas para acompanhar qualquer lanche.</p>
+
+                    <div class="flex items-centergap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 15.00</p>
+                        <button class="bg-yellow-800 px-5 rounded add-to-cart-btn" data-name="Batata frita"
+                            data-price="15.00">
+
+                            <i class=" fa fa-cart-plus text-lg text-black"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!--fim produto 3-->
+            <!--produto 4-->
+            <div class="flex gap-2">
+                <img src="./assets/coxinha.png" alt="Coxinha"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Coxinha de frango</p>
+                    <p class="text-sm">Coxinha de frango crocante por fora e suculenta por dentro, recheada com frango
+                        desfiado temperado e cremoso catupiry.</p>
+
+                    <div class="flex items-centergap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6.00</p>
+                        <button class="bg-yellow-800 px-5 rounded add-to-cart-btn" data-name="Coxinha de frango"
+                            data-price="6.00">
+
+                            <i class=" fa fa-cart-plus text-lg text-black"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!--fim produto 4-->
+            <!--produto 5-->
+            <div class="flex gap-2">
+                <img src="./assets/enrolado.png" alt="Enrolado"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Enrolado de salsicha</p>
+                    <p class="text-sm">Enrolado de salsicha, uma combinação perfeita de salsicha suculenta envolta em
+                        uma massa macia e crocante, assada até ficar dourada.</p>
+
+                    <div class="flex items-centergap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6.00</p>
+                        <button class="bg-yellow-800 px-5 rounded add-to-cart-btn" data-name="Enrolado de salsicha"
+                            data-price="6.00">
+
+                            <i class=" fa fa-cart-plus text-lg text-black"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!--fim produto 5-->
+
+
+            <!-- fim grid comidas-->
+
+
+        </main>
+
+        <div class="mx-auto max-w-7xl my-2">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb6">
+                Bebidas
+            </h2>
+        </div>
+
+        <!-- grid bebidas-->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+            <!--produto 6-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/Coca cola.png" alt="Coca-cola"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Coca-cola</p>
+                    <p class="text-sm">Refrigerante Coca-Cola 250ml, refrescante e com seu sabor clássico e
+                        inconfundível.</p>
+
+                    <div class="flex items-centergap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 7.00</p>
+                        <button class="bg-yellow-800 px-5 rounded add-to-cart-btn" data-name="Coca cola"
+                            data-price="7.00">
+
+                            <i class=" fa fa-cart-plus text-lg text-black"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!--fim produto 6-->
+            <!--produto 7-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/sprite.png" alt="Sprite"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Sprite soda</p>
+                    <p class="text-sm">Refrigerante Sprite 250ml, refrescante e leve, com sabor cítrico de limão e
+                        limão-taiti.</p>
+
+                    <div class="flex items-centergap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 7.00</p>
+                        <button class="bg-yellow-800 px-5 rounded add-to-cart-btn" data-name="Sprite soda"
+                            data-price="7.00">
+
+                            <i class=" fa fa-cart-plus text-lg text-black"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!--fim produto 7-->
+            <!--produto87-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/Água mineral.png" alt="Agua"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <div>
+                    <p class="font-bold">Água mineral</p>
+                    <p class="text-sm">Água mineral 250ml.</p>
+
+                    <div class="flex items-centergap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 4.00</p>
+                        <button class="bg-yellow-800 px-5 rounded add-to-cart-btn" data-name="Agua mineral"
+                            data-price="4.00">
+
+                            <i class=" fa fa-cart-plus text-lg text-black"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!--fim produto 8-->
+
+        </div>
+        <!-- fim grid bebidas-->
+
+    </div>
+    <!-- Fim menu-->
+
+    <!-- Modal cart-->
+
+    <div class=" bg-yellow-100/0 w-full h-full fixed top-0 left-0 z-9 [99] items-center justify-center hidden"
+        id="cart-modal">
+        <div class="bg-yellow-700 p-5 rounded-md min-w[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2x mb-2">Meu carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold mt-4">Digite seu nome</p>
+            <input type="text" name="Digite seu nome..." id="owner" class="w-full border-2 p-1 rounded my-1">
+            <p class="text-red-500 hidden" id="order-warn">Digite seu nome</p>
+
+            <p class="font-bold mt-4">Endereço de entrega</p>
+
+            <input type="text" name="Digite seu endereço..." id="address" class="w-full border-2 p-1 rounded my-1" />
+            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço</p>
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" class="bg-orange-500 text-black px-4 py-1 rounded">Finalizar pedido</button>
+                <button id="cancel-order-btn" class="bg-red-500 text-black px-4 py-1 rounded">Cancelar pedido</button>
+            </div>
+
+            <div class="flex items-left justify-between mt-5 w-full">
+                <h2 class="text-left font-bold text-2x mb-2">Aceitamos crédito, débito e pix</h2>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Modal cart-->
+
+    <!-- button footer-->
+    <footer class="w-full bg-black py-3 fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+            (<span id="cart-count">0</span>)
+            Ir para carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+
+    <!-- fim button footer-->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
